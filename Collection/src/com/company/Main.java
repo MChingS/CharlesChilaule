@@ -31,6 +31,7 @@ public class Main {
         {
             System.out.println(temp.ID+" "+temp.fname+" "+temp.lname+" "+temp.grade);
         }
+
     }
 
 }
