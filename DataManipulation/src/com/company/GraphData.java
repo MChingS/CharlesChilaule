@@ -36,6 +36,20 @@ public class GraphData {
                     {
                         System.out.println("Value in array "+i+" and value in array "+x+" are the same");
                     }
+
+
+                }
+                if(i>0 && i< numberOfValues)
+                {
+                   if(yValues[i]<yValues[i-1] && yValues[i]<yValues[i+1])
+                   {
+                       System.out.println("value number "+x+" is a fall point");
+                   }
+                  if(yValues[i]>yValues[i-1] && yValues[i]>yValues[i+1])
+                   {
+                       System.out.println("value number "+x+" is a rising point");
+                  }
+                    System.out.println("values I is :"+i);
                 }x++;
                 //getting max and min values
                if(max<yValues[i]){
