@@ -39,7 +39,7 @@ public class GraphData {
 
 
                 }
-                if(i>0 && i< numberOfValues)
+                if(i>0 && i< numberOfValues-1)
                 {
                    if(yValues[i]<yValues[i-1] && yValues[i]<yValues[i+1])
                    {
@@ -49,7 +49,7 @@ public class GraphData {
                    {
                        System.out.println("value number "+x+" is a rising point");
                   }
-                    System.out.println("values I is :"+i);
+
                 }x++;
                 //getting max and min values
                if(max<yValues[i]){
