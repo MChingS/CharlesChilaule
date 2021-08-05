@@ -1,5 +1,7 @@
 package com.company;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 public class Main {
 
@@ -26,12 +28,27 @@ public class Main {
         list.remove(stud2);
         System.out.println("");
         System.out.println("_______After removing student________");
+
         //display after removing student
         for(studentList temp:list)
         {
             System.out.println(temp.ID+" "+temp.fname+" "+temp.lname+" "+temp.grade);
         }
+        System.out.println("_______Grade for specific Student________");
+        //find grade for student1
+        for(studentList temp:list)
+        {
+            if (temp.fname == "charles") {
+                System.out.println("The grade for Charles is grade :" + temp.grade);
+            }
+//        }
+        }
+        //sorting student list
+        System.out.println("_______Grade for specific Student________");
+        TreeSet<studentList> sortedStudentList = new TreeSet<studentList>();
+
+        sortedStudentList.addAll(list);
+
 
     }
-
 }
