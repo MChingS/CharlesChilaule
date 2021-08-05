@@ -9,13 +9,14 @@ public class GraphData {
         int numberOfValues=0;
         Scanner input = new Scanner(System.in);
         System.out.println("System graph started.");
-        System.out.println("Enter how many values you need for the graph (Y values)");
+        System.out.print("Enter how many values you need for the graph (Y values) :");
         numberOfValues = input.nextInt();
         int x=1;
 
         if(numberOfValues >0)
         {
             double[] yValues = new double[numberOfValues];
+
             for (int i = 0; i < numberOfValues; i++)
             {
                 System.out.print("Enter value number "+x+" :");
@@ -24,8 +25,19 @@ public class GraphData {
             }
             double max =yValues[0],min=yValues[0];
 
+            System.out.println("Tables values bellow");
+            x=1;
             for (int i = 0; i < numberOfValues; i++)
             {
+                //getting same values table view
+                if(i!=numberOfValues-1)
+                {
+                    if(yValues[i]==yValues[i+1])
+                    {
+                        System.out.println("Value in array "+i+" and value in array "+x+" are the same");
+                    }
+                }x++;
+                //getting max and min values
                if(max<yValues[i]){
                    max=yValues[i];
                }
@@ -33,7 +45,6 @@ public class GraphData {
                {
                    min=yValues[i];
                }
-               
             }
             double difference = max-min;
             System.out.println("The maximum value is :"+max);
