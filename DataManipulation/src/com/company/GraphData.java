@@ -36,8 +36,6 @@ public class GraphData {
                     {
                         System.out.println("Value in array "+i+" and value in array "+x+" are the same");
                     }
-
-
                 }
                 if(i>0 && i< numberOfValues-1)
                 {
@@ -49,7 +47,6 @@ public class GraphData {
                    {
                        System.out.println("value number "+x+" is a rising point");
                   }
-
                 }x++;
                 //getting max and min values
                if(max<yValues[i]){
