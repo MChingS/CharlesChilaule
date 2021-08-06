@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GraphData {
@@ -10,9 +11,12 @@ public class GraphData {
         Scanner input = new Scanner(System.in);
         System.out.println("System graph started.");
         System.out.print("Enter how many values you need for the graph (Y values) :");
-        numberOfValues = input.nextInt();
-        int x=1;
 
+        try
+        {
+            numberOfValues = input.nextInt();
+
+        int x=1;
         if(numberOfValues >0)
         {
             double[] yValues = new double[numberOfValues];
@@ -65,6 +69,11 @@ public class GraphData {
         else
         {
             System.out.println("The number of values must be greater than 0 restart the program and try again");
+        }
+        }
+        catch (InputMismatchException e)
+        {
+            System.out.println("Input must be an integer");
         }
     }
 }
