@@ -8,6 +8,7 @@ public class StudentRegistration {
 
     boolean fileCondition=false;
     String filename ="";
+    String tempVale="";
     class student {
         public String getName() {
             return name;
@@ -79,9 +80,22 @@ public class StudentRegistration {
         System.out.print("Enter your surname :");
         toStudent.surname = input.nextLine();
         System.out.print("Enter your ID number :");
-        toStudent.IDNumber = input.nextLine();
+        tempVale=input.nextLine();
+        while (tempVale.length()!=13)
+        {
+            System.out.print("Enter your ID number, integer only and must be 13 integers:");
+            tempVale=input.nextLine();
+        }
+        toStudent.IDNumber = tempVale;
         System.out.print("Enter your phone number :");
-        toStudent.phoneNumber = input.nextLine();
+        // not for now i check SA number only
+        tempVale=input.nextLine();
+        while (tempVale.length()!=10)
+        {
+            System.out.print("Enter your phone number integer only and must be 10 integers:");
+            tempVale=input.nextLine();
+        }
+        toStudent.phoneNumber = tempVale;
         System.out.print("Enter your email address :");
         toStudent.emailAddress = input.nextLine();
         System.out.print("Enter your course :");
