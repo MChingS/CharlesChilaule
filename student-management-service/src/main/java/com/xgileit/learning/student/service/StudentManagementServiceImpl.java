@@ -12,8 +12,14 @@ public abstract class StudentManagementServiceImpl implements StudentManagementS
     @Override
     public String addStudent (Student student)
     {
-        studentMap.put(student.getStudentNumber(), student);
-        return "Student added";
+        try {
+            studentMap.put(student.getStudentNumber(), student);
+            return "Student added";
+        }
+        catch (Exception e)
+        {
+            return "an error occurred please try again";
+        }
     }
     @Override
     public Map<Integer, Student>listAll()

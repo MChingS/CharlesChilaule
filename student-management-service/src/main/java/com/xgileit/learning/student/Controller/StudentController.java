@@ -12,22 +12,33 @@ import java.util.*;
 @RequestMapping (value = "/api/v1/student") //URI
 
 public class StudentController {
+
+
     StudentManagementServiceImpl studentManagementService = new StudentManagementServiceImpl() {
         @Override
         public Map<Integer, Student> listAll() {
             return null;
         }
     };
+    //Get student show list before adding
     @GetMapping
     public String studentSelect()
     {
         return "Get Student Method";
     }
 
+    //insert student to the list
     @PostMapping
     public String studentInsert()
     {
         return "Insert student data";
+    }
+
+    //Get student list after adding
+    @GetMapping(value = "afterAddingStudent")
+    public String studentSelectAfter()
+    {
+        return "Get Student Method";
     }
 
     @PutMapping
